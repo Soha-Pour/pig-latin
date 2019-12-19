@@ -1,19 +1,27 @@
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
-    return true;
-  } else {
-   return false;
+var pigLatin = function(input) {
+  if ((input.charAt(0) === "a") || (input.charAt(0) === "i") || (input.charAt(0) === "o") || (input.charAt(0) === "u") || (input.charAt(0) === "y")) {
+    return (input + "ay");
+  } else if {
+
   }
 };
 
 
-
-
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#sentenceInput").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
-    $("#result").text(result);
+
+    var input = $("input#sentence").val();
+    var resultText = pigLatin(input);
+
+    alert(resultText);
+
+
+
+
   });
+
+
+
+
 });
